@@ -1,0 +1,4 @@
+com\qa\testcases\HomePageTest.class
+com\qa\testcases\ContactsPageTest.class
+com\qa\testcases\LoginPageTest.class
+com\qa\testcases\TasksPageTest.class

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Test Maven Suite]" parallel="tests">
+  <test thread-count="5" verbose="0" name="Test 1 : Chrome LoginPage Test(failed)" parallel="tests">
+    <parameter name="portNo" value="4445"/>
+    <parameter name="appUrl" value="https://www.freecrm.com"/>
+    <classes>
+      <class name="com.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loginPageLogoTest"/>
+          <include name="loginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- Test 1 : Chrome LoginPage Test(failed) -->
+  <test thread-count="5" verbose="0" name="Test 2 : Firefox HomePage Test(failed)" parallel="tests">
+    <parameter name="portNo" value="4446"/>
+    <parameter name="appUrl" value="https://www.freecrm.com"/>
+    <classes>
+      <class name="com.qa.testcases.HomePageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="homePageContactsLink"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.testcases.HomePageTest -->
+      <class name="com.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loginPageTitleTest"/>
+        </methods>
+      </class> <!-- com.qa.testcases.LoginPageTest -->
+      <class name="com.qa.testcases.TasksPageTest">
+        <methods>
+          <include name="createTasks"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.qa.testcases.TasksPageTest -->
+    </classes>
+  </test> <!-- Test 2 : Firefox HomePage Test(failed) -->
+</suite> <!-- Failed suite [Test Maven Suite] -->

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Test Maven Suite]">
+  <test thread-count="5" name="IE LoginPage Test(failed)">
+    <parameter name="browser" value="IE"/>
+    <classes>
+      <class name="com.qa.testcases.LoginPageTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="loginPageLogoTest"/>
+        </methods>
+      </class> <!-- com.qa.testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- IE LoginPage Test(failed) -->
+</suite> <!-- Failed suite [Test Maven Suite] -->

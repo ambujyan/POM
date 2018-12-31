@@ -30,9 +30,8 @@ public class HomePageTest extends TestBase {
 	}
 	
 	@BeforeMethod
-	@Parameters({"portNo","appUrl"})
-	public void setUp(String portNo, String appUrl) throws MalformedURLException {
-		initialization(portNo, appUrl);
+	public void setUp() throws MalformedURLException {
+		initialization();
 		loginPage = new LoginPage();
 		homePage = new HomePage();  
 		tasksPage = new TasksPage();
@@ -68,7 +67,7 @@ public class HomePageTest extends TestBase {
 	
 	@AfterMethod
 	public void tearDown() {
-	//driver.close();
+	driver.close();
 	}
 	
 }

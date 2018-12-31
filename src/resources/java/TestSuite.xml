@@ -3,8 +3,6 @@
 <suite name="Test Maven Suite" parallel="tests">
 
  	<test name="Test 1 : Chrome LoginPage Test">
-	<parameter name="portNo" value="4445"></parameter>
-	<parameter name="appUrl" value="https://www.freecrm.com"></parameter>
 		<classes>
 			<class name="com.qa.testcases.LoginPageTest">
 	 			<methods>
@@ -16,8 +14,6 @@
 	</test>
 
 	<test name="Test 2 : Firefox HomePage Test">
-	<parameter name="portNo" value="4446"></parameter>
-	<parameter name="appUrl" value="https://www.freecrm.com"></parameter>
 		<classes>
 			<class name="com.qa.testcases.LoginPageTest">
 	 			<methods>

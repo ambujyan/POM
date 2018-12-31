@@ -3,22 +3,22 @@ package com.qa.base;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 
 
 public class TestBase {
 
 	public static WebDriver driver;
 	public static Properties prop;
-	public static String nodeUrl;
+	//public static String nodeUrl;
 	
 	public TestBase(){
 		try {
@@ -34,60 +34,9 @@ public class TestBase {
 			
 	}
 
-	public static void initialization(String portNo, String appUrl) throws MalformedURLException {
-	
-		if(portNo.equalsIgnoreCase("4445")) {
-			
-			nodeUrl = "http://172.20.1.21:4445/wd/hub";
-			System.out.println("Chrome Browser Test Environment Created");
-			
-			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setBrowserName("chrome");
-			cap.setPlatform(Platform.WINDOWS);
-			
-			//Define Chrome Options
-			ChromeOptions options = new ChromeOptions();
-			options.merge(cap);
-			
-			driver = new RemoteWebDriver(new URL(nodeUrl), cap);
-			driver.manage().window().maximize();
-			driver.navigate().to(appUrl);
-			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS); 
-			
-		}
-		else if(portNo.equalsIgnoreCase("4446")) {
-			
-			nodeUrl = "http://172.20.1.21:4446/wd/hub";
-			System.out.println("Firefox Browser Test Environment Created");
-			
-			DesiredCapabilities cap = new DesiredCapabilities();
-			cap.setBrowserName("firefox");
-			cap.setPlatform(Platform.WINDOWS);
-			cap.setVersion("38.0.5");
-			cap.setCapability("marionette", false);
-			
-			ChromeOptions options = new ChromeOptions();
-			options.merge(cap);
-			
-			//DesiredCapabilities.firefox();
-			driver = new RemoteWebDriver(new URL(nodeUrl), cap);
-			driver.manage().window().maximize();
-			driver.navigate().to(appUrl);
-			driver.manage().timeouts().implicitlyWait(20,TimeUnit.SECONDS);
-		}
-		
-		else
-		{
-			System.err.println("Provide correct port no");
-		}
-		
-	
-	}
-}
+	public static void initialization() {
 
-/*	public static void initialization(String browser) {
-
-// String browserName = prop.getProperty("browser");
+	String browser = prop.getProperty("browser");
 			
 	if(browser.equalsIgnoreCase("chrome")) {
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/src/resources/java/chromedriver.exe");
@@ -108,9 +57,7 @@ public class TestBase {
 		
 		//DesiredCapabilities.firefox();
 		driver = new FirefoxDriver(capabilites);
-		//localhost/0:0:0:0:0:0:0:1:13985
-		 //setUp("http://my.local.host:5555/", "*firefox");
-		 FirefoxOptions options = new FirefoxOptions();
+		FirefoxOptions options = new FirefoxOptions();
 	     options.addArguments("--headless");
 	     driver =  new FirefoxDriver(options);
 	     	
@@ -138,5 +85,5 @@ public class TestBase {
 	//Log.info("URL launched");
 	
 	
-}
-*/	
+}}
+	

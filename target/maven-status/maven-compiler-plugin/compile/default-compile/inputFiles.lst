@@ -1,8 +1,8 @@
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\pages\FeaturesPage.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\pages\PricingPage.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\pages\HomePage.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\pages\TasksPage.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\util\TestUtil.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\base\TestBase.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\pages\ContactsPage.java
-F:\Workspace\MavenDemoTest\src\main\java\com\qa\pages\LoginPage.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\base\TestBase.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\pages\ContactsPage.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\pages\PricingPage.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\pages\FeaturesPage.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\util\TestUtil.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\pages\TasksPage.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\pages\HomePage.java
+C:\Users\ambuj.jain\git\POM1\src\main\java\com\qa\pages\LoginPage.java

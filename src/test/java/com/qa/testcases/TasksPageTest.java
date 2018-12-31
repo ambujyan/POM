@@ -29,9 +29,8 @@ public class TasksPageTest extends TestBase{
 	}
 	
 	@BeforeMethod
-	@Parameters({"portNo","appUrl"})
-	public void setUp(String portNo, String appUrl) throws MalformedURLException {
-		initialization(portNo, appUrl);
+	public void setUp() throws MalformedURLException {
+		initialization();
 		loginPage = new LoginPage();
 		contactsPage = new ContactsPage();
 		tasksPage = new TasksPage();
@@ -58,7 +57,7 @@ public class TasksPageTest extends TestBase{
 	
 	@AfterMethod
 	public void tearDown() {
-		//driver.close();
+		driver.close();
 	}
 	
 }

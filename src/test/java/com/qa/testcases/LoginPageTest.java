@@ -28,10 +28,11 @@ public class LoginPageTest extends TestBase{
 		super();
 	}
 		
+	
+	
 	@BeforeMethod
-	@Parameters({"portNo","appUrl"})
-	public void setUp(String portNo,String appUrl) throws MalformedURLException {
-		initialization(portNo,appUrl);
+	public void setUp() throws MalformedURLException {
+		initialization();
 		loginPage = new LoginPage();
 		featuresPage = new FeaturesPage();
 		testUtil = new TestUtil();
@@ -95,7 +96,7 @@ public class LoginPageTest extends TestBase{
 	
 	@AfterMethod
 	public void tearDown() {
-	//driver.quit();
+	driver.quit();
 	
 	}
 }

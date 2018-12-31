@@ -37,9 +37,8 @@ public class ContactsPageTest extends TestBase {
 	}
 	
 	@BeforeMethod
-	@Parameters({"portNo","appUrl"})
-	public void setUp(String portNo, String appUrl) throws InterruptedException, MalformedURLException {
-		initialization(portNo,appUrl);
+	public void setUp() throws InterruptedException, MalformedURLException {
+		initialization();
 		loginPage = new LoginPage();
 		homePage = new HomePage();
 		tasksPage = new TasksPage();
@@ -83,7 +82,7 @@ public class ContactsPageTest extends TestBase {
 */	
 	@AfterMethod
 	public void tearDown() {
-	//driver.close();
+	driver.close();
 	}
 	
 }
